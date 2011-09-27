@@ -18,11 +18,20 @@ boundary = m{j};
 plot(boundary(:,2), boundary(:,1), 'r', 'LineWidth', 0.2)
 end
 
+s = regionprops(y, 'Centroid');
+for k = 1:numel(s)
+    c = s(k).Centroid;
+    text(c(1), c(2), sprintf('%d', k), ...
+        'HorizontalAlignment', 'center', ...
+        'VerticalAlignment', 'middle');
+end
+hold off
 
 disp('Number of bacteria in image')
 num = length(m)
 
 z = zeros(1,num);
+B = bwlabel(y, 8);
 for k = 1:numel(B)
     if B(k) > 0
         z(B(k)) = z(B(k))+1;
@@ -31,11 +40,11 @@ end
 
 %A
 disp('Area of each Bacteria')
-z;
+z
 disp('Area of all Bacteria')
 sum(z)
 
-A = bwlabel(y, 8)
-cc = bwconncomp(A)
+
+
 %hold on
 whos
