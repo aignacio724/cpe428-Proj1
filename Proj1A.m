@@ -1,5 +1,5 @@
-Y = imread('C:\Users\aignacio\Documents\MATLAB\Landscape.jpg');
-X = imread('C:\Users\aignacio\Documents\MATLAB\HiggsBoson.jpg');
+Y = imread('Landscape.jpg');
+X = imread('HiggsBoson.jpg');
 tempX = rgb2gray(X);
 tempY = rgb2gray(Y);
 a = imresize(Y, 0.01);
