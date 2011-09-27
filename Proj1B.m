@@ -12,10 +12,12 @@ figure, imshow(y);
 z = bwboundaries(y);
 figure, imshow(y);
 text(16,16,strcat('\color{red}Objects Found:',num2str(length(z))))
+
 hold on
 
 for k = 1:length(z)
 boundary = z{k};
 plot(boundary(:,2), boundary(:,1), 'r', 'LineWidth', 0.2)
 end
+bwarea(y)
 whos
