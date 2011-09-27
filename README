@@ -1,0 +1,7 @@
+These are the needed files for CPE 428
+Proj1A.m is for the first portion of the project
+    Getting to know how to use MatLab and changing colored pictures to grayscale
+
+Proj1B.m is for the second portion of the project
+    Identifying Bacteria in a gray scale image and calculating the area of total bacteria
+
