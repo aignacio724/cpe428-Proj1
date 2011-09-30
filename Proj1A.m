@@ -1,3 +1,5 @@
+%Project 1
+%Part A
 Y = imread('Landscape.jpg');
 X = imread('HiggsBoson.jpg');
 tempX = rgb2gray(X);
